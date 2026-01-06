@@ -5,7 +5,7 @@ class Trapazoid:
         # This function defines a trapazoid by four points and a height
         #   t0 /-------\ t1     .
         #     /        \       .
-        # b0 /         \ b1   . height
+        # b0 /---------\ b1   . height
 
         # TODO: This is not a PDF
 
@@ -32,12 +32,12 @@ class Trapazoid:
 
 def main():
     fuzzifier = Trapazoid(0, 10, 4, 8, 7)
-    print(fuzzifier.fuzzify(0))
-    print(fuzzifier.fuzzify(1))
-    print(fuzzifier.fuzzify(3))
-    print(fuzzifier.fuzzify(5))
-    print(fuzzifier.fuzzify(9))
-    print(fuzzifier.fuzzify(10))
+    print(f"0 -> {fuzzifier.fuzzify(0)}")
+    print(f"1 -> {fuzzifier.fuzzify(1)}")
+    print(f"3 -> {fuzzifier.fuzzify(3)}")
+    print(f"5 -> {fuzzifier.fuzzify(5)}")
+    print(f"9 -> {fuzzifier.fuzzify(9)}")
+    print(f"10 -> {fuzzifier.fuzzify(10)}")
 
 
 if __name__ == "__main__":
